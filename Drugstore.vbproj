@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E2CEB92-8251-406E-B13F-7CA9F309A244}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Drugstore.My.MyApplication</StartupObject>
+    <RootNamespace>Drugstore</RootNamespace>
+    <AssemblyName>Drugstore</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Drugstore.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Drugstore.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Category.vb" />
+    <Compile Include="Presentation\CategoryForm.Designer.vb">
+      <DependentUpon>CategoryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\CategoryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persistence\DAOCategory.vb" />
+    <Compile Include="Persistence\DAOMedicine.vb" />
+    <Compile Include="Persistence\DAOPatient.vb" />
+    <Compile Include="Persistence\DAOPrescription.vb" />
+    <Compile Include="Presentation\datesPrescriptionsForm.Designer.vb">
+      <DependentUpon>datesPrescriptionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\datesPrescriptionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persistence\DBBroker.vb" />
+    <Compile Include="Presentation\femaleRankingForm.Designer.vb">
+      <DependentUpon>femaleRankingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\femaleRankingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\MedicineForm.Designer.vb">
+      <DependentUpon>MedicineForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\MedicineForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\medicineRankingForm.Designer.vb">
+      <DependentUpon>medicineRankingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\medicineRankingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\mostExpensivePresc.Designer.vb">
+      <DependentUpon>mostExpensivePresc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\mostExpensivePresc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PatientsForm.Designer.vb">
+      <DependentUpon>PatientsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PatientsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\PrescriptionForm.Designer.vb">
+      <DependentUpon>PrescriptionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\PrescriptionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Domain\Medicine.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Domain\Patient.vb" />
+    <Compile Include="Domain\Prescription.vb" />
+    <Compile Include="Presentation\underAgeMedicineIncome.Designer.vb">
+      <DependentUpon>underAgeMedicineIncome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\underAgeMedicineIncome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentation\CategoryForm.resx">
+      <DependentUpon>CategoryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\datesPrescriptionsForm.resx">
+      <DependentUpon>datesPrescriptionsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\femaleRankingForm.resx">
+      <DependentUpon>femaleRankingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MedicineForm.resx">
+      <DependentUpon>MedicineForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\medicineRankingForm.resx">
+      <DependentUpon>medicineRankingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\mostExpensivePresc.resx">
+      <DependentUpon>mostExpensivePresc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PatientsForm.resx">
+      <DependentUpon>PatientsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\PrescriptionForm.resx">
+      <DependentUpon>PrescriptionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\underAgeMedicineIncome.resx">
+      <DependentUpon>underAgeMedicineIncome.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
