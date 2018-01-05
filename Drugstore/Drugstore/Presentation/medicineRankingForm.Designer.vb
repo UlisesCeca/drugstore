@@ -23,13 +23,13 @@ Partial Class medicineRankingForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.searchbt = New System.Windows.Forms.Button()
+        Me.date2Box = New System.Windows.Forms.TextBox()
+        Me.date1Box = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Medicine = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.units = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.date2Box = New System.Windows.Forms.DateTimePicker()
-        Me.date1Box = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,6 +41,20 @@ Partial Class medicineRankingForm
         Me.searchbt.TabIndex = 12
         Me.searchbt.Text = "Search"
         Me.searchbt.UseVisualStyleBackColor = True
+        '
+        'date2Box
+        '
+        Me.date2Box.Location = New System.Drawing.Point(95, 62)
+        Me.date2Box.Name = "date2Box"
+        Me.date2Box.Size = New System.Drawing.Size(100, 22)
+        Me.date2Box.TabIndex = 11
+        '
+        'date1Box
+        '
+        Me.date1Box.Location = New System.Drawing.Point(95, 18)
+        Me.date1Box.Name = "date1Box"
+        Me.date1Box.Size = New System.Drawing.Size(100, 22)
+        Me.date1Box.TabIndex = 10
         '
         'Label2
         '
@@ -74,7 +88,7 @@ Partial Class medicineRankingForm
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(326, 358)
+        Me.DataGridView1.Size = New System.Drawing.Size(326, 229)
         Me.DataGridView1.TabIndex = 13
         '
         'Medicine
@@ -91,31 +105,15 @@ Partial Class medicineRankingForm
         Me.units.ReadOnly = True
         Me.units.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
-        'date2Box
-        '
-        Me.date2Box.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.date2Box.Location = New System.Drawing.Point(88, 60)
-        Me.date2Box.Name = "date2Box"
-        Me.date2Box.Size = New System.Drawing.Size(114, 22)
-        Me.date2Box.TabIndex = 28
-        '
-        'date1Box
-        '
-        Me.date1Box.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.date1Box.Location = New System.Drawing.Point(88, 16)
-        Me.date1Box.Name = "date1Box"
-        Me.date1Box.Size = New System.Drawing.Size(114, 22)
-        Me.date1Box.TabIndex = 27
-        '
         'medicineRankingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(574, 382)
-        Me.Controls.Add(Me.date2Box)
-        Me.Controls.Add(Me.date1Box)
+        Me.ClientSize = New System.Drawing.Size(574, 251)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.searchbt)
+        Me.Controls.Add(Me.date2Box)
+        Me.Controls.Add(Me.date1Box)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "medicineRankingForm"
@@ -127,11 +125,11 @@ Partial Class medicineRankingForm
     End Sub
 
     Friend WithEvents searchbt As Button
+    Friend WithEvents date2Box As TextBox
+    Friend WithEvents date1Box As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Medicine As DataGridViewTextBoxColumn
     Friend WithEvents units As DataGridViewTextBoxColumn
-    Friend WithEvents date2Box As DateTimePicker
-    Friend WithEvents date1Box As DateTimePicker
 End Class

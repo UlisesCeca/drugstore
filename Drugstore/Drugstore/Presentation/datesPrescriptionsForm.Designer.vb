@@ -25,6 +25,8 @@ Partial Class datesPrescriptionsForm
         Me.patientsList = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.date1Box = New System.Windows.Forms.TextBox()
+        Me.date2Box = New System.Windows.Forms.TextBox()
         Me.prescriptionsList = New System.Windows.Forms.ListBox()
         Me.medicinesList = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -43,8 +45,6 @@ Partial Class datesPrescriptionsForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.date1Box = New System.Windows.Forms.DateTimePicker()
-        Me.date2Box = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'patientsList
@@ -73,6 +73,20 @@ Partial Class datesPrescriptionsForm
         Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Date 2"
+        '
+        'date1Box
+        '
+        Me.date1Box.Location = New System.Drawing.Point(281, 32)
+        Me.date1Box.Name = "date1Box"
+        Me.date1Box.Size = New System.Drawing.Size(100, 22)
+        Me.date1Box.TabIndex = 3
+        '
+        'date2Box
+        '
+        Me.date2Box.Location = New System.Drawing.Point(281, 76)
+        Me.date2Box.Name = "date2Box"
+        Me.date2Box.Size = New System.Drawing.Size(100, 22)
+        Me.date2Box.TabIndex = 4
         '
         'prescriptionsList
         '
@@ -239,29 +253,11 @@ Partial Class datesPrescriptionsForm
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "Patient"
         '
-        'date1Box
-        '
-        Me.date1Box.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.date1Box.Location = New System.Drawing.Point(281, 30)
-        Me.date1Box.Name = "date1Box"
-        Me.date1Box.Size = New System.Drawing.Size(114, 22)
-        Me.date1Box.TabIndex = 25
-        '
-        'date2Box
-        '
-        Me.date2Box.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.date2Box.Location = New System.Drawing.Point(281, 70)
-        Me.date2Box.Name = "date2Box"
-        Me.date2Box.Size = New System.Drawing.Size(114, 22)
-        Me.date2Box.TabIndex = 26
-        '
         'datesPrescriptionsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1296, 405)
-        Me.Controls.Add(Me.date2Box)
-        Me.Controls.Add(Me.date1Box)
         Me.Controls.Add(Me.patientLabel)
         Me.Controls.Add(Me.costLabel)
         Me.Controls.Add(Me.discountLabel)
@@ -280,6 +276,8 @@ Partial Class datesPrescriptionsForm
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.medicinesList)
         Me.Controls.Add(Me.prescriptionsList)
+        Me.Controls.Add(Me.date2Box)
+        Me.Controls.Add(Me.date1Box)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.patientsList)
@@ -293,6 +291,8 @@ Partial Class datesPrescriptionsForm
     Friend WithEvents patientsList As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents date1Box As TextBox
+    Friend WithEvents date2Box As TextBox
     Friend WithEvents prescriptionsList As ListBox
     Friend WithEvents medicinesList As ListBox
     Friend WithEvents Button1 As Button
@@ -311,6 +311,4 @@ Partial Class datesPrescriptionsForm
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents date1Box As DateTimePicker
-    Friend WithEvents date2Box As DateTimePicker
 End Class

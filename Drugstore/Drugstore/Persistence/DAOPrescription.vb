@@ -39,8 +39,8 @@ Public Class DAOPrescription
             p.Patient = New Patient(Convert.ToInt32(data(0)))
             p.Patient.readPatient()
             p.PresDate = Convert.ToDateTime(data(1))
-            p.ToPayAmount = Convert.ToDouble(data(2))
-            p.DiscountedAmount = Convert.ToDouble(data(3))
+            p.ToPayAmount = Convert.ToDecimal(data(2))
+            p.DiscountedAmount = Convert.ToDecimal(data(3))
         End While
 
         readMedicines(p)
@@ -79,7 +79,7 @@ Public Class DAOPrescription
         data = DBBroker.getInstance.read("SELECT SUM((p.Quantity * m.UnitPrice) - ((p.Quantity * m.UnitPrice) * c.Disccount / 100)) FROM ((((medicines m INNER JOIN prescription_details p ON (p.Medicine = m.MedicineID)) INNER JOIN PRECRIPTIONS pe ON (p.Precription = pe.PrecriptionID)) INNER JOIN PATIENTS pa ON (pe.Patient = pa.PatientID)) INNER JOIN CATEGORIES c ON (pa.PatCategory = c.CategoryID)) WHERE p.Precription = " & p.PrescriptionID & ";")
 
         While data.Read()
-            p.ToPayAmount = Convert.ToDouble(data(0))
+            p.ToPayAmount = Convert.ToDecimal(data(0))
         End While
         p.updatePrescription()
         p.calculateDiscount()
@@ -91,7 +91,7 @@ Public Class DAOPrescription
         data = DBBroker.getInstance.read("SELECT SUM((p.Quantity * m.UnitPrice) * c.Disccount / 100) FROM ((((medicines m INNER JOIN prescription_details p ON (p.Medicine = m.MedicineID)) INNER JOIN PRECRIPTIONS pe ON (p.Precription = pe.PrecriptionID)) INNER JOIN PATIENTS pa ON (pe.Patient = pa.PatientID)) INNER JOIN CATEGORIES c ON (pa.PatCategory = c.CategoryID)) WHERE p.Precription = " & p.PrescriptionID & ";")
 
         While data.Read()
-            p.DiscountedAmount = Convert.ToDouble(data(0))
+            p.DiscountedAmount = Convert.ToDecimal(data(0))
         End While
         p.updatePrescription()
     End Sub

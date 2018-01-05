@@ -37,7 +37,7 @@ Public Class DAOCategory
 
         While data.Read()
             c.CatDescription = data(0).ToString()
-            c.Discount = Convert.ToDouble(data(1))
+            c.Discount = Convert.ToDecimal(data(1))
         End While
 
     End Sub

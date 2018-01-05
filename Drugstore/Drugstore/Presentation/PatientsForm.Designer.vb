@@ -24,6 +24,7 @@ Partial Class PatientsForm
     Private Sub InitializeComponent()
         Me.patientsList = New System.Windows.Forms.ListBox()
         Me.nameBox = New System.Windows.Forms.TextBox()
+        Me.bdayBox = New System.Windows.Forms.TextBox()
         Me.idLabel = New System.Windows.Forms.Label()
         Me.nameLabel = New System.Windows.Forms.Label()
         Me.bdayLabel = New System.Windows.Forms.Label()
@@ -36,13 +37,12 @@ Partial Class PatientsForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.categoryList = New System.Windows.Forms.ListBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.genderBox = New System.Windows.Forms.TextBox()
         Me.categoryGroup = New System.Windows.Forms.GroupBox()
         Me.discountLabel = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.descLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.bdayBox = New System.Windows.Forms.DateTimePicker()
-        Me.genderBox = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.categoryGroup.SuspendLayout()
@@ -67,6 +67,15 @@ Partial Class PatientsForm
         Me.nameBox.Name = "nameBox"
         Me.nameBox.Size = New System.Drawing.Size(132, 23)
         Me.nameBox.TabIndex = 2
+        '
+        'bdayBox
+        '
+        Me.bdayBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.bdayBox.Location = New System.Drawing.Point(115, 106)
+        Me.bdayBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.bdayBox.Name = "bdayBox"
+        Me.bdayBox.Size = New System.Drawing.Size(132, 23)
+        Me.bdayBox.TabIndex = 3
         '
         'idLabel
         '
@@ -199,11 +208,11 @@ Partial Class PatientsForm
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.genderBox)
-        Me.GroupBox3.Controls.Add(Me.bdayBox)
         Me.GroupBox3.Controls.Add(Me.genderLabel)
         Me.GroupBox3.Controls.Add(Me.idBox)
         Me.GroupBox3.Controls.Add(Me.bdayLabel)
         Me.GroupBox3.Controls.Add(Me.idLabel)
+        Me.GroupBox3.Controls.Add(Me.bdayBox)
         Me.GroupBox3.Controls.Add(Me.nameLabel)
         Me.GroupBox3.Controls.Add(Me.nameBox)
         Me.GroupBox3.Location = New System.Drawing.Point(175, 34)
@@ -214,6 +223,15 @@ Partial Class PatientsForm
         Me.GroupBox3.TabIndex = 11
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "General"
+        '
+        'genderBox
+        '
+        Me.genderBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.genderBox.Location = New System.Drawing.Point(115, 151)
+        Me.genderBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.genderBox.Name = "genderBox"
+        Me.genderBox.Size = New System.Drawing.Size(132, 23)
+        Me.genderBox.TabIndex = 4
         '
         'categoryGroup
         '
@@ -274,26 +292,6 @@ Partial Class PatientsForm
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Description"
         '
-        'bdayBox
-        '
-        Me.bdayBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bdayBox.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.bdayBox.Location = New System.Drawing.Point(115, 105)
-        Me.bdayBox.Name = "bdayBox"
-        Me.bdayBox.Size = New System.Drawing.Size(132, 23)
-        Me.bdayBox.TabIndex = 18
-        '
-        'genderBox
-        '
-        Me.genderBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.genderBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.genderBox.FormattingEnabled = True
-        Me.genderBox.Items.AddRange(New Object() {"F", "M"})
-        Me.genderBox.Location = New System.Drawing.Point(115, 147)
-        Me.genderBox.Name = "genderBox"
-        Me.genderBox.Size = New System.Drawing.Size(132, 25)
-        Me.genderBox.TabIndex = 19
-        '
         'PatientsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -314,6 +312,7 @@ Partial Class PatientsForm
 
     Friend WithEvents patientsList As ListBox
     Friend WithEvents nameBox As TextBox
+    Friend WithEvents bdayBox As TextBox
     Friend WithEvents idLabel As Label
     Friend WithEvents nameLabel As Label
     Friend WithEvents bdayLabel As Label
@@ -328,9 +327,8 @@ Partial Class PatientsForm
     Friend WithEvents Label1 As Label
     Friend WithEvents categoryGroup As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents genderBox As TextBox
     Friend WithEvents discountLabel As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents categoryList As ListBox
-    Friend WithEvents bdayBox As DateTimePicker
-    Friend WithEvents genderBox As ComboBox
 End Class

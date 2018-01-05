@@ -175,7 +175,7 @@
         bdayBox.Text = ""
         descLabel.Text = ""
         discountLabel.Text = ""
-        genderBox.Items.Clear()
+        genderBox.Text = ""
     End Sub
 
     ' Adds all the existing categories to a listbox

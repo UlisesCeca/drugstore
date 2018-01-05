@@ -42,7 +42,7 @@ Partial Class underAgeMedicineIncome
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(326, 521)
+        Me.DataGridView1.Size = New System.Drawing.Size(326, 229)
         Me.DataGridView1.TabIndex = 20
         '
         'medicine
@@ -63,7 +63,7 @@ Partial Class underAgeMedicineIncome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(367, 545)
+        Me.ClientSize = New System.Drawing.Size(361, 262)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "underAgeMedicineIncome"
         Me.Text = "Queries - Underage Medicines Income"

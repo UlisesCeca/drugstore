@@ -45,6 +45,7 @@ Partial Class PrescriptionForm
         Me.patientList = New System.Windows.Forms.ListBox()
         Me.availableMedicineList = New System.Windows.Forms.ListBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.dateBox = New System.Windows.Forms.TextBox()
         Me.disccountBox = New System.Windows.Forms.Label()
         Me.costBox = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -60,7 +61,6 @@ Partial Class PrescriptionForm
         Me.nameLabel = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.clearMBtn = New System.Windows.Forms.Button()
-        Me.dateBox = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -348,6 +348,15 @@ Partial Class PrescriptionForm
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "General"
         '
+        'dateBox
+        '
+        Me.dateBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateBox.Location = New System.Drawing.Point(123, 23)
+        Me.dateBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.dateBox.Name = "dateBox"
+        Me.dateBox.Size = New System.Drawing.Size(132, 23)
+        Me.dateBox.TabIndex = 34
+        '
         'disccountBox
         '
         Me.disccountBox.BackColor = System.Drawing.Color.WhiteSmoke
@@ -523,15 +532,6 @@ Partial Class PrescriptionForm
         Me.clearMBtn.Text = "Clear Med."
         Me.clearMBtn.UseVisualStyleBackColor = True
         '
-        'dateBox
-        '
-        Me.dateBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateBox.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dateBox.Location = New System.Drawing.Point(123, 20)
-        Me.dateBox.Name = "dateBox"
-        Me.dateBox.Size = New System.Drawing.Size(133, 23)
-        Me.dateBox.TabIndex = 36
-        '
         'PrescriptionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -583,6 +583,7 @@ Partial Class PrescriptionForm
     Friend WithEvents Label11 As Label
     Friend WithEvents disccountBox As Label
     Friend WithEvents costBox As Label
+    Friend WithEvents dateBox As TextBox
     Friend WithEvents patientList As ListBox
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents piceLabel As Label
@@ -592,5 +593,4 @@ Partial Class PrescriptionForm
     Friend WithEvents availableMedicineList As ListBox
     Friend WithEvents patientBox As Label
     Friend WithEvents quantity As TextBox
-    Friend WithEvents dateBox As DateTimePicker
 End Class

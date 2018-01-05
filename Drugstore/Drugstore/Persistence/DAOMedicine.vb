@@ -64,7 +64,7 @@ Public Class DAOMedicine
 
         While data.Read()
             m.MedDescription = data(0).ToString
-            m.UnitPrice = Convert.ToDouble(data(1))
+            m.UnitPrice = Convert.ToDecimal(data(1))
         End While
 
     End Sub
@@ -103,7 +103,7 @@ Public Class DAOMedicine
         While data.Read()
             m = New Medicine(Convert.ToInt32(data(0)))
             m.MedDescription = data(1).ToString
-            m.income = Convert.ToDouble(data(2))
+            m.income = Convert.ToDecimal(data(2))
             _medicinesList.Add(m)
         End While
     End Sub
